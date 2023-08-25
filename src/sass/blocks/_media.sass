@@ -1,0 +1,265 @@
+@media screen and ( max-width: 1439px ) //до
+	
+@media screen and ( max-width: 1200px )
+	.container
+		max-width: 960px
+
+	.about
+		padding-top: 50px
+		&__main
+			max-width: 500px
+			margin-top: 15px
+
+		&__item-card
+			max-width: 200px
+
+		&__wrapper
+			flex-direction: column
+			align-items: center
+
+		&__img
+			width: 400px
+			height: 450px
+
+	.experience
+		&__wrapper
+			grid-template-columns: auto auto
+
+	.skills
+		&__wrapper-card
+			grid-template-columns: repeat(auto-fit, minmax(270px, 1fr))
+			grid-auto-columns: 270px
+
+		&__wrapper-block
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+
+		&__all-block
+			width: 200px
+			height: 200px
+		
+		&__all-block-name
+			bottom: 10px
+		
+		// &__all-back
+		// 	width: 200px
+
+		&__block-progress-bar
+			margin-bottom: 40px
+			justify-content: space-around
+
+	.sidebar
+		display: none
+
+	.contacts
+		&__btn
+			font-size: 14px
+			line-height: 14px
+
+@media screen and ( max-width: 992px ) 
+	.container
+		max-width: 720px
+
+	.promo
+		&__title
+			position: relative
+			z-index: 1
+
+		&__slider
+			position: absolute
+			left: 45%
+			top: 45%
+			z-index: 0
+
+	.about
+		padding-top: 130px
+		&__img
+			display: none
+
+	.experience
+		padding-top: 60px
+		&__wrapper
+			grid-template-columns: auto
+
+	.portfolio
+		&__wrapper
+			grid-template-columns: repeat(auto-fit, 280px)
+			grid-template-rows: repeat(auto-fit,280px)
+			grid-auto-rows: 280px
+			justify-content: space-around
+			row-gap: 35px
+
+		#item1
+			grid-column: unset
+			grid-row: unset
+		#item2
+			grid-column: unset
+			grid-row: unset
+		#item3
+			grid-column: unset
+			grid-row: unset
+		#item4
+			grid-column: unset
+			grid-row: unset
+		#item5	
+			grid-column: unset
+			grid-row: unset
+		#item6
+			grid-column: unset
+			grid-row: unset
+
+	.contacts
+		&__wrapper
+			justify-content: center
+		&__photo			
+			display: none
+	
+@media screen and ( max-width: 768px ) 
+	.container
+		max-width: 540px
+	
+	.title
+		&_fz48
+			font-size: 36px
+	
+	.promo
+		&__title
+			max-width: 400px
+			line-height: 39px
+		&__slider
+			display: none
+	.about
+		padding-top: 50px
+
+	.skills
+		&__wrapper-progress-bar
+			justify-content: center
+
+		&__wrapper-all-head
+			justify-content: flex-start
+
+		&__wrapper-block
+			gap: 50px
+
+	.portfolio
+		&__wrapper
+			.hov
+				.caption
+					width: 100%
+					h2, p
+						transform: translateX(0px)
+						opacity: 1
+
+		grid-template-columns: repeat(auto-fit,280px)
+		grid-template-rows: repeat(auto-fit,280px)
+
+		&__tabs
+			flex-direction: column
+			align-items: center
+
+@media screen and ( max-width: 576px ) 
+	.container
+		width: 100%
+		padding: 0 10px 
+
+	.title
+		&_fz48
+			font-size: 36px
+		&_fz16
+			font-size: 26px
+
+	.menu
+		&__bar
+			width: 250px
+			padding-left: 20px
+		&__social
+			bottom: 200px
+
+	.promo
+		&__main
+			z-index: 2
+		&__title
+			margin-bottom: 35px
+		&__subtitle
+			margin-bottom: 35px
+			font-size: 18px
+
+		&__slider
+			display: none
+			width: 100%
+			bottom: -100px
+			left: 50%
+			transform: translateX(-50%)
+
+	.about
+		&__img
+			width: 300px
+			height: 340px
+		
+		&__cards
+			justify-content: center
+
+		&__item-card
+			margin-right: 20px
+
+	.experience
+		&__wrapper
+			grid-template-columns: auto
+			padding: 0px 25px
+	
+	.contacts
+		&__wrapper
+			grid-template-columns: 1fr
+			padding: 10px
+
+		&__form
+			grid-template: 45px 45px 190px 45px / 1fr
+
+		&__trigger
+			grid-template-columns: repeat(1, auto)
+
+			button
+				grid-row: 2/3
+
+		&__input
+			width: 100%
+		#in2
+			grid-row: 2/3
+	
+	.skills
+		.wrapper
+			height: 3000px
+
+		&__wrapper-all-head
+			justify-content: center
+
+		&__all-block
+			width: 200px
+			height: 200px
+			
+		&__wrapper-block
+			justify-content: center
+			overflow-y: scroll
+			height: 2200px
+
+		&__all-block
+			justify-self: center
+	
+	.portfolio
+		&__wrapper
+			.hov
+				.caption
+					width: 100%
+					h2, p
+						transform: translateX(0px)
+						opacity: 1
+
+		grid-template-columns: repeat(auto-fit,280px)
+		grid-template-rows: repeat(auto-fit,280px)
+
+		&__tabs
+			flex-direction: column
+			align-items: center
+
+	.modal
+		&__window
+			box-shadow: none

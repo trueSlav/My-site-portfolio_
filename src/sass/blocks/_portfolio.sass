@@ -1,0 +1,68 @@
+.portfolio
+	padding-top: 120px
+	@include subtitle-title
+
+	&__divider
+		@include divider
+		margin: 0 auto
+		margin-top: 25px
+	
+	&__wrapper
+		margin-top: 60px
+		display: grid
+		grid-template: repeat(2, 1fr) / repeat(4, 1fr)
+		grid-auto-rows: 280px
+		gap: 5px
+
+		.hov
+			@include hover-portfolio
+
+		#item4
+			grid-column: 4
+			grid-row: 1/3
+
+		#item6
+			grid-column: 2/4
+			grid-row: 2
+		
+		a
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+
+	&__tabs
+		margin: 0
+		padding: 0
+		display: flex
+		justify-content: space-between
+		margin-top: 25px
+		list-style: none
+
+	&__tab	
+		height: 50px
+		width: 200px
+
+		display: flex
+		align-items: center
+		justify-content: center
+		cursor: pointer
+
+		font-weight: 900
+		font-size: 14px
+		text-decoration: none
+
+		color: #000
+
+		@include link-hover
+
+	.tab-active
+		background-color: $mcolor
+		
+		transition: background-color .7s
+
+		&:hover
+			color: #000
+
+	.tab-content-hide
+		grid-template: repeat(2,280px)/repeat(4,1fr)

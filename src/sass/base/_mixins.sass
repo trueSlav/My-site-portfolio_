@@ -1,0 +1,142 @@
+@mixin before_circle()
+	&::before
+		content: ''
+		position: absolute
+		left: 0px
+		bottom: 50%
+		transform: translateY(50%)
+		z-index: -1
+		width: 36px
+		height: 36px
+		border-radius: 100%
+		background: $mcolor
+
+@mixin before_circle_icon()
+	&::before
+		content: ''
+		position: absolute
+		top: 0px	
+		left: 0px
+		z-index: -1
+		width: 36px
+		height: 36px
+		border-radius: 100%
+		background: $mcolor
+
+@mixin divider()
+	width: 60px
+	height: 3px
+	background-color: $mcolor
+
+@mixin subtitle-title()
+	&__subtitle
+		position: relative
+		text-align: center
+		@include before_circle
+		&::before
+			left: 50%
+			transform: translateX(-50%)
+			bottom: -20%
+	&__title
+		text-align: center
+		margin-top: 6px
+
+//hover portfolio
+@mixin hover-portfolio()
+
+	display: block
+	position: relative
+	transition: filter .6s
+	
+	.caption
+		background-color: rgba(0, 0, 0, 0.31)
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		width: 0px
+		overflow: hidden
+		transition: width .9s
+		
+		h2, p
+			opacity: 0
+			position: absolute
+			white-space: nowrap
+			overflow: hidden
+			transition: transform .9s, opacity .9s
+			color: #fff
+
+		h2
+			width: 100%
+			text-align: center
+			background: rgb(131, 58, 180)
+			background: linear-gradient(90deg, rgba(131, 58, 180, .4) 0%, rgba(253, 29, 29, .4) 50%, rgba(252, 176, 69, .4) 100%)
+			top: 33%
+			transform: translateX(700px)
+
+		p
+			// background: rgba(255, 255, 255, 0.41)
+			background: $mcolorrbg
+			color: #000
+			top: 51%
+			left: 20px
+			transform: translateX(-700px)
+			padding: 0 10px
+
+	&:hover 
+		img
+			filter: grayscale(8)
+		
+		.caption 
+			width: 100%
+
+		h2, p
+			transform: translateX(0px)
+			opacity: 1
+
+		p
+			height: 50px
+			white-space: normal
+
+
+//link hover bottom line
+@mixin link-hover()
+
+	position: relative
+
+	&::after
+		content: ''
+		display: block
+		position: absolute
+		bottom: 0
+		left: 0
+
+		width: 0
+		height: 2px
+		background: $mcolor
+		opacity: 0
+
+		transition: all .7s
+	a
+		transition: color .7s
+
+	transition: color .7s
+
+	&:hover
+		color: $mcolor
+
+		a
+			color: $mcolor
+		
+		&::after
+			opacity: 1
+			width: 100%
+
+		
+
+	
+	
+
+
+	

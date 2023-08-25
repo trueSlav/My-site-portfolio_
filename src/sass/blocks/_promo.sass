@@ -1,0 +1,114 @@
+.promo
+	position: relative
+	min-height: 100vh
+	padding-top: 105px
+	
+	// background: url('../img/Background-head.jpg') center (center/cover) no-repeat
+
+	&__background
+		position: absolute
+		bottom: 0
+
+		width: 100%
+		height: 27%
+
+		z-index: -1
+		background: $bgcolor
+
+	&__wrapper
+		display: flex
+		justify-content: space-between
+	
+	&__main
+		margin-top: 100px
+
+	//Slider
+
+	&__slider
+		position: relative
+		margin-top: 30px 
+		width: 400px
+		height: 400px
+
+	&__slider-counter
+		display: flex
+		justify-content: space-between
+
+	&__slider-prev, &__slider-next
+		position: absolute
+		z-index: 10
+		bottom: -8%
+		// transform: translateY(-50%)
+
+		width: 35px
+		height: 35px
+		cursor: pointer
+
+		img
+			width: 100%
+			height: 100%
+
+	&__slider-prev
+		left: 10px
+	&__slider-next
+		right: 10px
+
+	&__slider-wrapper
+		width: 100%
+		margin-top: 5px
+		box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25)
+		overflow: hidden
+
+	&__slider-inner
+		display: flex
+		transition: transform .5s ease
+	
+	&__slide
+		width: 100%
+		height: 390px
+
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+
+	//***
+
+	&__subtitle
+		position: relative
+		z-index: 2
+		padding-left: 10px
+		@include before_circle
+
+	&__title
+		max-width: 535px
+		margin-top: 10px
+
+	&__btns
+		margin-top: 25px
+		display: flex
+		align-items: center
+
+	&__link
+		display: flex
+		min-width: 130px
+		min-height: 45px
+
+		justify-content: center
+		align-items: center
+
+		text-align: center
+		font-weight: 900
+		font-size: 14px
+		text-decoration: none
+
+		color: #000
+
+		&_mr44
+			margin-right: 24px
+
+	&__link-nobutton
+		@include link-hover
+		
+
+
